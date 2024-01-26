@@ -1,5 +1,141 @@
+/* *:where( :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+
+    all: unset;
+
+    display: revert;
+
+} */
+
 body{
-    background-color: rgb(233, 107, 107);
+    font-size: 1.1em;
     font-weight: bold;
+    /* margin-left: 20px; */
+    
+}
+
+
+.navegator{
+    background-color: #d64141;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    z-index: 9;
+}
+
+.lista{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+li {
+    list-style: none;
+}
+
+.link{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: lighter;
+    text-decoration-line: underline transparent;
+}
+
+.link:hover {
+    cursor: pointer;
+    text-decoration: underline #ffffff 1px;
+    text-underline-offset: 5px;
+}
+
+.cabecera{
+    background-color: #263238;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.title{
+    font-size: 2em;
+    color: #ffffff;
+}
+.subtitle{
+    font-size: 1.7em;
+    color: #ffffff;
+}
+.thirdTitle{
+    background-color: #263238;
+    font-size: 1.5em;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-top: 0px;
+}
+
+.divTodosPokemon{
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+
+.divCadaPokemon{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #def7ea;
+
+}
+
+
+/* PAGINA DE DETALLE DE LOS POKEMON */
+
+.paginaDetalle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detallePokemon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detallePokemon img{
+    height: 150px;
+    width: 150px;
+    
+}
+
+.botones{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.editar{
+    border-radius: 10px;
+    font-weight: bold;
+}
+.editar:hover{
+    cursor: pointer;
+    color:#263238;
+    background-color: #07b61e;
+    
+}
+.delete{
+    border-radius: 10px;
+    font-weight: bold;
+}
+.delete:hover{
+    cursor: pointer;
+    color:#263238;
+    background-color: #d64141;
     
 }

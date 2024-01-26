@@ -15,10 +15,10 @@ export const getPokemonById = (idParam) => {
     return pokemonAux
 }
 
-export const modifyName = (idPokemon, newName) => {
+export const modifyName = (pokemonId, newName) => {
     pokemons.map(pokemon => {
-        if (pokemon.id == idPokemon) {
-            pokemon.name = newName
+        if (pokemon.id == pokemonId) {
+            pokemon.name === newName
         }
     })
 }
