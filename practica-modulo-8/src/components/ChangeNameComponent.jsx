@@ -1,56 +1,54 @@
+import React, { useState } from 'react';
 import { modifyName } from "@/pages/api/pokemonFetch";
-import React from 'react'
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 
-export default function ChangeNameComponent({pokemonId}) {
+export default function ChangeNameComponent({ pokemonId, toggleChangeName }) {
+  const [name, setName] = useState("");
+  const [confirmName, setNameConfirm] = useState("");
+  const [error, setError] = useState(false);
 
-    const [name, setName] = useState("");
-    const [confirmName, setNameConfirm] = useState("");
-    const [error, setError] = useState(false)
+  const onChangeNameHandle = (e) => {
+    setName(e.target.value);
+  }
 
-    const onChangeNombreHandle = (e) => {
-        setName(e.target.value)
+  const onChangeNameHandleConfirm = (e) => {
+    setNameConfirm(e.target.value);
+  }
+
+  const changeName = () => {
+    if (name === confirmName) {
+      modifyName(pokemonId, name);
+      setError(false);
+      toggleChangeName(); // Oculta el componente después de cambiar el nombre
+    } else {
+      setError(true);
     }
-
-    const onChangeNombreHandleConfirm = (e) => {
-        setNameConfirm(e.target.value)
-    }
-
-
-    const changeName = () => {
-        if( name === confirmName) {
-            modifyName(pokemonId, name)
-            setError(false)
-        }else{
-            setError(true)
-        }
-      }
+  }
 
   return (
     <div>
-        <h2>Change Name Component</h2>
-        <div>
-            <label>Nuevo nombre</label>
-            <input type='text' value={name} onChange={onChangeNombreHandle} />
-        </div>
-        <div>
-            <label>Confirma el nuevo nombre</label>
-            <input type='text' value={confirmName} onChange={onChangeNombreHandleConfirm} />
-        </div>
-        <div>
-            <button onClick={changeName}>Cambiar nombre</button>
-        </div>
-        <br/>
+      <h2>Change Name Component</h2>
+      <div>
+        <label>Nuevo nombre</label>
+        <input type='text' value={name} onChange={onChangeNameHandle} />
+      </div>
+      <div>
+        <label>Confirma el nuevo nombre</label>
+        <input type='text' value={confirmName} onChange={onChangeNameHandleConfirm} />
+      </div>
+      <div>
+        <button onClick={changeName} className='editar'>Cambiar nombre</button>
+      </div>
+      <br/>
 
       {
         error ? 
-            <div>
-                <span>Error: Los nombres no son iguales</span>
-            </div>
+          <div>
+            <span>Error: Los nombres no son iguales</span>
+          </div>
         : 
-            null
+          null
       }
     </div>
   )
 }
+

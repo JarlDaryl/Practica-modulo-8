@@ -115,6 +115,7 @@ li {
 
 .botones{
     display: flex;
+    justify-content: center;
     gap: 25px;
     margin-bottom: 20px;
 }

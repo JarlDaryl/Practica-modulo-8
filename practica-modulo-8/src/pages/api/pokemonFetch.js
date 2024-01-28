@@ -18,7 +18,7 @@ export const getPokemonById = (idParam) => {
 export const modifyName = (pokemonId, newName) => {
     pokemons.map(pokemon => {
         if (pokemon.id == pokemonId) {
-            pokemon.name === newName
+            pokemon.name = newName
         }
     })
 }
