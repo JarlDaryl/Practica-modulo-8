@@ -1,4 +1,4 @@
-import React, {useState}   from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import PokemonDetailsComponent from '@/components/PokemonDetailsComponent';
 import { deletePokemonById } from './api/pokemonFetch';
@@ -16,34 +16,41 @@ export default function PokemonDetallePage() {
 		router.back();
 	};
 
-	 const toggleChangeName = () => {
-    setShowChangeName(!showChangeName);
-  };
+	const toggleChangeName = () => {
+		setShowChangeName(!showChangeName);
+	};
 
 	return (
 		<div className='paginaDetalle'>
-			<h2>Pokemon Detalle Page</h2>
-			
+			<div className='cabecera'>
+				<h2 className='title'>Detalles de </h2>
+			</div>
+
 			{showChangeName ? (
-        <ChangeNameComponent pokemonId={id} toggleChangeName={toggleChangeName} />
-      ) : (
-        <div>
-          <PokemonDetailsComponent pokemonId={id} />
+				<ChangeNameComponent
+					pokemonId={id}
+					toggleChangeName={toggleChangeName}
+				/>
+			) : (
+				<div>
+					<PokemonDetailsComponent pokemonId={id} />
 
-          <div className='botones'>
-            <button className='editar' onClick={toggleChangeName}>
-              Editar Nombre
-            </button>
-            <button className='delete' onClick={deletePokemon}>
-              Eliminar Pokemon
-            </button>
-          </div>
-        </div>
-      )}
+					<div className='botones'>
+						<button className='editar' onClick={toggleChangeName}>
+							Editar Nombre
+						</button>
+						<button className='delete' onClick={deletePokemon}>
+							Eliminar Pokemon
+						</button>
+					</div>
+				</div>
+			)}
 
-      <div>
-        <Link href={{ pathname: '/' }}>Home</Link>
-      </div>
-    </div>
-  );
+			<div>
+        <button className='inicio'>
+				<Link href={{ pathname: '/' }} >Inicio</Link>
+        </button>
+			</div>
+		</div>
+	);
 }

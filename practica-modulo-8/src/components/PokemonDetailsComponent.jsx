@@ -11,14 +11,14 @@ export default function PokemonDetailsComponent({ pokemonId }) {
 
 	return (
 		<div>
-			<h1>PokemonDetails Component</h1>
+			
 			<div className='detallePokemon'>
 				<span>Id: {pokemon.id}</span>
 				<span>Nombre: {pokemon.name}</span>
 				<span>Altura: {pokemon.details ? pokemon.details.height : "Cargando..."}</span>
 				<span>Peso: {pokemon.details ? pokemon.details.weight : "Cargando..."}</span>
 				<span>Tipo: {" "}
-       {pokemon.details ? pokemon.details.type.join(", ") : "Cargando..."}</span>
+       			{pokemon.details ? pokemon.details.type.join(", ") : "Cargando..."}</span>
 
 				<img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}/>
 			</div>

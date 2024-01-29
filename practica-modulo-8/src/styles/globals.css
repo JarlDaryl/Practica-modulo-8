@@ -6,12 +6,21 @@
 
 } */
 
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato-Light.ttf);
+}
+
+
 body{
+    font-family: lato;
     font-size: 1.1em;
     font-weight: bold;
     /* margin-left: 20px; */
     
 }
+
+
 
 
 .navegator{
@@ -27,6 +36,7 @@ body{
 }
 
 .lista{
+    font-family: lato;
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -55,18 +65,26 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+.cabecera svg{
+    margin: -100px;
 }
 
 
 .title{
+    font-family: lato;
     font-size: 2em;
     color: #ffffff;
 }
 .subtitle{
+    font-family: lato;
     font-size: 1.7em;
     color: #ffffff;
 }
 .thirdTitle{
+    font-family: lato;
     background-color: #263238;
     font-size: 1.5em;
     color: #ffffff;
@@ -77,7 +95,22 @@ li {
     margin-top: 0px;
 }
 
+.todosPokemons{
+    font-family: lato;
+    background-color: #263238;
+    font-size: 1.5em;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-top: 0%;
+    position: sticky;
+}
+
+
 .divTodosPokemon{
+    font-family: lato;
     display: flex;
     flex-direction: column;
  
@@ -92,32 +125,50 @@ li {
 
 }
 
+.detalle{
+    border-radius: 10px;
+    font-weight: bold;
+    margin:10px;
+    padding: 3px;
+}
+.detalle:hover{
+    background-color:#6ed0e9;
+}
+
 
 /* PAGINA DE DETALLE DE LOS POKEMON */
 
 .paginaDetalle{
+    font-family: lato;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
+    background-color: #f05656;
 }
 
 .detallePokemon{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 3px;
+    background-color: #6ee9a9;
+    border-radius: 15px;
 }
 
 .detallePokemon img{
     height: 150px;
     width: 150px;
-    
+
 }
+
 
 .botones{
     display: flex;
     justify-content: center;
     gap: 25px;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .editar{
@@ -137,6 +188,12 @@ li {
 .delete:hover{
     cursor: pointer;
     color:#263238;
-    background-color: #d64141;
-    
+    background-color: #d90707;
+}
+
+.inicio{
+    border-radius: 10px;
+    font-weight: bold;
+    margin:10px;
+    padding: 3px;
 }
