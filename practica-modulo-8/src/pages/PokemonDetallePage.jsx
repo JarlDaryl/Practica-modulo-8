@@ -23,7 +23,7 @@ export default function PokemonDetallePage() {
 	return (
 		<div className='paginaDetalle'>
 			<div className='cabecera'>
-				<h2 className='title'>Detalles de </h2>
+				<h2 className='title'>Detalles del Pokémon</h2>
 			</div>
 
 			{showChangeName ? (

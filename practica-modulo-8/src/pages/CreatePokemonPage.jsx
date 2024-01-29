@@ -36,7 +36,8 @@ const weightHandler = (e) => {
   setWeight(e.target.value)
 }
 const typeHandler = (e) => {
-  setType(e.target.value).split([,])
+  const typesArray = e.target.value.split(',');
+  setType(typesArray); 
 }
 
 const addPokemonClick = () => {
@@ -76,7 +77,7 @@ const addPokemonClick = () => {
 					<input type='text' value={type} onChange={typeHandler} />
 				</div>
 				<div>
-					<button onClick={addPokemonClick}className='editar'>Crear usuario</button>
+					<button onClick={addPokemonClick}className='editar'>Crear Pokémon</button>
 				</div>
         <button className='inicio'>
         <Link

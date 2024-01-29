@@ -16,6 +16,7 @@ body{
     font-family: lato;
     font-size: 1.1em;
     font-weight: bold;
+
     /* margin-left: 20px; */
     
 }
@@ -196,4 +197,10 @@ li {
     font-weight: bold;
     margin:10px;
     padding: 3px;
+}
+
+
+.contacto{
+    padding:50px;
+    background-color:#fb9595;
 }

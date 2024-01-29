@@ -18,7 +18,7 @@ export default function ChangeNameComponent({ pokemonId, toggleChangeName }) {
     if (name === confirmName) {
       modifyName(pokemonId, name);
       setError(false);
-      toggleChangeName(); // Oculta el componente después de cambiar el nombre
+      toggleChangeName(); 
     } else {
       setError(true);
     }
