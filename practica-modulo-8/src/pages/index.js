@@ -23,7 +23,7 @@ export default function Home() {
 				<h1 className='thirdTitle'>Pokémon S.A</h1>
 				<div>
 					
-				<svg xmlns="http://www.w3.org/2000/svg" fill="#3e0df2" width="300px" height="300px" viewBox="-2.4 -2.4 28.80 28.80" role="img" stroke="#3e0df2" stroke-width="0.00024000000000000003" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="#3e0df2" width="300px" height="300px" viewBox="-2.4 -2.4 28.80 28.80" role="img" stroke="#3e0df2" stroke-width="0.010240000000003" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)">
 
 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
 
@@ -43,15 +43,14 @@ export default function Home() {
 
 </g>
 
-</svg>
+				</svg>
 				
 				
 				</div>
 			<h2 className='subtitle'>App de gestión de Pokemons </h2>
 			</div>
 
-
-      <AllPokemonComponent/>
+      	<AllPokemonComponent/>
 
           
 		</>

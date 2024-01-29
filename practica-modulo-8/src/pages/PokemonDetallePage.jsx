@@ -21,10 +21,8 @@ export default function PokemonDetallePage() {
 	};
 
 	return (
-		<div className='paginaDetalle'>
-			<div className='cabecera'>
-				<h2 className='title'>Detalles del Pokémon</h2>
-			</div>
+		<div>
+			
 
 			{showChangeName ? (
 				<ChangeNameComponent
@@ -42,11 +40,12 @@ export default function PokemonDetallePage() {
 						<button className='delete' onClick={deletePokemon}>
 							Eliminar Pokemon
 						</button>
+						
 					</div>
 				</div>
 			)}
 
-			<div>
+			<div className='flex-inicio'>
         <button className='inicio'>
 				<Link href={{ pathname: '/' }} >Inicio</Link>
         </button>

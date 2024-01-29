@@ -154,7 +154,7 @@ li {
     align-items: center;
     gap: 3px;
     background-color: #6ee9a9;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .detallePokemon img{
@@ -197,10 +197,36 @@ li {
     font-weight: bold;
     margin:10px;
     padding: 3px;
+
 }
 
 
 .contacto{
     padding:50px;
     background-color:#fb9595;
+}
+
+.favoritos{
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.favoritos:hover{
+    cursor: pointer;
+    background-color: rgb(204, 204, 56);
+}
+
+/* PAGINA DE CREACION DE LOS POKEMON */
+
+.creaTuPokemon{
+    font-family: lato;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background-color: #f05656;
+}
+.flex-inicio{
+    display: flex;
+    justify-content: center;
 }

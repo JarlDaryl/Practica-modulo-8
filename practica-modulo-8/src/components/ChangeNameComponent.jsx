@@ -25,8 +25,9 @@ export default function ChangeNameComponent({ pokemonId, toggleChangeName }) {
   }
 
   return (
-    <div>
-      <h2>Change Name Component</h2>
+    <div className='paginaDetalle'>
+      <div className='cabecera'>      <h2 className='title'>Cambia el nombre al Pokémon</h2>
+      </div>
       <div>
         <label>Nuevo nombre</label>
         <input type='text' value={name} onChange={onChangeNameHandle} />

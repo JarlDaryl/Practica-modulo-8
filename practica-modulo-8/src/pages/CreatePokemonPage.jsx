@@ -17,7 +17,7 @@ export default function CreatePokemonPage() {
 
 
 
-  const idHandler = (e) => {
+const idHandler = (e) => {
     setId(e.target.value)
 }
 
@@ -51,7 +51,7 @@ const addPokemonClick = () => {
         			<h1 className='title'>Crea tu Pokémon</h1>
       </div>
 
-			<div className='paginaDetalle'>
+			<div className='creaTuPokemon'>
 				<div>
 					<span>Id: </span>
 					<input type='text' value={id} onChange={idHandler} />

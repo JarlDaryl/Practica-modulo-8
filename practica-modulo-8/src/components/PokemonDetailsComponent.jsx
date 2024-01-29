@@ -11,6 +11,9 @@ export default function PokemonDetailsComponent({ pokemonId }) {
 
 	return (
 		<div>
+			<div className='cabecera'>
+				<h2 className='title'>Detalles de {pokemon.name}</h2>
+			</div>
 			
 			<div className='detallePokemon'>
 				<span>Id: {pokemon.id}</span>
